@@ -4,4 +4,4 @@ ADD target/delivery-promise-engine-0.0.1.jar delivery-promise-engine-0.0.1.jar
 
 ENTRYPOINT ["java","-jar","delivery-promise-engine-0.0.1.jar"]
 
-EXPOSE 8080
+EXPOSE 8085
