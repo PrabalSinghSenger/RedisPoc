@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'maven-3.5.0'
+        maven 'maven'
     }
 
     stages {
@@ -18,6 +18,9 @@ pipeline {
                 sh 'mvn clean package'
             }
             post {
+                always{
+                  cleanWs()
+                }
                     success {
                         junit 'target/surefire-reports/**/*.xml'
                  }
